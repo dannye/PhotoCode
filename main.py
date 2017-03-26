@@ -1,9 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Mar 25 03:10:32 2017
+    Copyright 2017 Tommy Lynch, Daniel Harding
 
-@author: tommy
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import pygame
@@ -273,8 +284,7 @@ def run(maze, xtra):
             running = False
         if seconds >= 20:
             running = False
-        
-        
+    
     screen = pygame.display.set_mode((800, 500))
     screen.fill((white))
 
@@ -345,7 +355,6 @@ while menu_loop:
     functions_main.button_noFparam("SCAN", 575, 120, 150, 40, red, bright_red, 18, screen, functions_main.scan)
     functions_main.button("RUN", 575, 180, 150, 40, green, bright_green, 18, screen, run, maze_selector)
     functions_main.button_noFparam("LOAD", 575, 240, 150, 40, purple, bright_purple, 18, screen, functions_main.load)
-    functions_main.button_noFparam("EXIT", 575, 300, 150, 40, yellow, bright_yellow, 18, screen, functions_main.close)
     functions_main.button("PREVIEW MAZE", 575, 360, 150, 40, cyan, bright_cyan, 18, screen, Build, maze_selector)
     functions_main.button_noFparam("NEXT MAZE", 675, 425, 95, 35, cyan, bright_cyan, 15, screen, next_maze)
     functions_main.button_noFparam("PAST MAZE", 520, 425, 95, 35, cyan, bright_cyan, 15, screen, past_maze)
@@ -361,3 +370,7 @@ while menu_loop:
     functions_main.text_box_left("PREVIEW MAZE: Display the current code", 25, 340, 450, 20, white, 18, screen)
     functions_main.text_box_left("NEXT MAZE: Go to a more difficult maze", 25, 375, 450, 20, white, 18, screen)
     functions_main.text_box_left("LAST MAZE: Go to a less difficult maze", 25, 410, 450, 20, white, 18, screen)
+    menu_loop = functions_main.button_noFparam("EXIT", 575, 300, 150, 40, yellow, bright_yellow, 18, screen, functions_main.close)
+    for event in pygame.event.get():
+         if event.type == pygame.QUIT:
+             menu_loop = False

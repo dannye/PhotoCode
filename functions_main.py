@@ -1,9 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 24 22:36:33 2017
+    Copyright 2017 Tommy Lynch, Daniel Harding
 
-@author: tommy
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import pygame
@@ -107,6 +118,7 @@ def easter_egg():
 def scan():
     root = tk.Tk()
     root.withdraw()
+    root.update()
     file_path = filedialog.askopenfilename()
     return_code = subprocess.call("Frodo.exe " + file_path, shell=True)
     if return_code == 0:
@@ -117,5 +129,6 @@ def load():
     frodo.parseFrodo("script.frodo")
 
 def close():
+    pygame.display.quit()
     pygame.quit()
 
