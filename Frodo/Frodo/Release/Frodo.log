@@ -1,0 +1,8 @@
+﻿  frodo.c
+  Generating code
+  14 of 69 functions (20.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Frodo.vcxproj -> C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Frodo\Release\Frodo.exe
+  Frodo.vcxproj -> C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Frodo\Release\Frodo.pdb (Full PDB)
