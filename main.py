@@ -9,7 +9,6 @@ Created on Sat Mar 25 03:10:32 2017
 import pygame
 import functions_main
 import sprites
-import solver
 
 pygame.init()
 
@@ -229,6 +228,7 @@ def Build(maze, xtra):
     screen.fill((white))
 
 def run(maze, xtra):
+    import solver
     startX = 0
     startY = 0
     endX = 0
